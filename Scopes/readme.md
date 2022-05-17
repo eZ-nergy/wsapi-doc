@@ -1,5 +1,7 @@
 # About M7 scope
 
+Note: it is assumed that you have a basic knowledge about Epex M7.
+
 # Channels
 
 The M7 scope has the following channels.
