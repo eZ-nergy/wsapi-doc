@@ -33,7 +33,7 @@ https://<eZ-Ops host>/api/EZ4a26927fea/m7/public_order_books/6395d740-6e55-11e8-
 
 # Subscriptions
 
-It order to start receiving events in a channel, you need to subscribe to it. It is done by sending a `subscribe` request. (See the `Message` section of the documentation). The API will acknowledge the subscription with a `subscribed` event.
+It order to start receiving events in a channel, you need to subscribe to it. It is done by sending a `subscribe` request. (See the [`Message`](3-message.md) section of the documentation). The API will acknowledge the subscription with a `subscribed` event.
 
 It is not possible to subscribe twice to the same channel (inside a single connection). An error message `error.already_subscribed` will be sent back if this happens.
 

@@ -7,11 +7,11 @@ This object represents orders sent by you or your company as a market participan
 | identifier       | long         | Identifier for Epex M7                                |
 | clientIdentifier | GUID         | Identifier defined by you when posting the order      |
 | revisionNumber   | long         | Revision of this order from Epex M7 point of view     |
-| contractArea     | ContractArea |                                                       |
+| contractArea     | [ContractArea](contractarea.md) |                                                       |
 | quantity         | decimal      |                                                       |
 | price            | decimal      |                                                       |
 | direction |  Enum        | `Buy` or `Sell`                                       |
-| executionRestriction | Enum | See below for values                                  | 
+| executionRestriction | Enum | See below for values                                  |
 | initialQuantity | decimal |                                                       |
 | type | Enum | `Regular` or `Iceberg` or `Block`                     |
 | comment | string |                                                       |

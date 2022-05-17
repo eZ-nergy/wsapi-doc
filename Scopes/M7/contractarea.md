@@ -5,7 +5,7 @@ This object contains information about the contract for a particular area.
 | Field | Type | Comment                                                    |
 | --- | --- |------------------------------------------------------------|
 | identifier | string | Uniquely identifies the ContractArea                       |
-| deliveryArea | string | See the DeliveryArea section for a list of supported areas |
+| deliveryArea | string | See the [DeliveryArea](deliveryarrea.md) section for a list of supported areas |
 | contractName | string | Name of the contract for Epex M7                           |
 | deliveryStart | DateTime | Start of the delivery period                               |
 | deliveryEnd | DateTime | End of the delivery period                                 |

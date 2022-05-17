@@ -8,8 +8,8 @@ This object represents a trade done by you or your company as a market participa
 | quantity   | decimal | |
 | price      | decimal | |
 | execDate   | DateTime | Date and time of the execution of the trade |
-| buySide    | TradeSide | May not be present, if not private |
-| sellSide   | TradeSide | May not be present, if not private |
+| buySide    | [TradeSide](tradeside.md) | May not be present, if not private |
+| sellSide   | [TradeSide](tradeside.md) | May not be present, if not private |
 | state | Enum | See below for values |
 | revisionNumber | long | |
 

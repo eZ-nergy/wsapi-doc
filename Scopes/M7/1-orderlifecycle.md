@@ -1,6 +1,6 @@
 ﻿# Order lifecycle
 
-The API allows to create, modify or cancel orders through the `m7:private_orders` channels. It is done by sending a `request` type message with an `OrderBatch` as the payload.
+The API allows to create, modify or cancel orders through the `m7:private_orders` channels. It is done by sending a `request` type message with an [`OrderBatch`](orderbatch.md) as the payload.
 
 ## Acting on orders
 

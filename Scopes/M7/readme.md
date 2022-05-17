@@ -24,3 +24,18 @@ Unsubscribe is done using the same URN you provided to subscribe.
 When you subscribe, the first event you receive (`sequence=0`) is the initial set of data for the channel. It contains the data from the time of the subscription to 24 hours later in term of delivery date.
 
 For example, for public trades, it will contain all the trades done for the delivery period of the next 24 hours. In case, there are too many, the initial snapshot can be split as explained in the section about split messages.
+
+# Table of Contents
+
+* [Order lifecycle](1-orderlifecycle.md)
+* [ContractArea](contractarea.md)
+* [ContractAreaState](contractareastate.md)
+* [MarketInformation](marketinformation.md)
+* [OrderBatch](orderbatch.md)
+* [PrivateOrder](privateorder.md)
+* [PrivateTrade](privatetrade.md)
+* [Product](product.md)
+* [PublicOrder](publicorder.md)
+* [PublicOrderBook](publicorderbook.md)
+* [PublicTrade](publictrade.md)
+* [TradeSide](tradeside.md)

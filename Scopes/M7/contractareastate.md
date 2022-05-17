@@ -4,7 +4,7 @@ This object represents the state of a contract for an area.
 
 | Field | Type | Comment |
 | --- | --- | --- |
-| contractArea | ContractArea | |
+| contractArea | [ContractArea](contractarea.md) | |
 | state | Enum | See below for values |
 | expirationDate | DateTime | May not be present |
 | tradingPhaseStart | DateTime | |

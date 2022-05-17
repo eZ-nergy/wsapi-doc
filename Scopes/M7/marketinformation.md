@@ -2,7 +2,7 @@
 
 | Field | Type         | Comment |
 | --- |--------------| --- |
-| contractArea | ContractArea | |
+| contractArea | [ContractArea](contractarea.md) | |
 | lastTradedPrice | decimal      | May not be present |
 | lastTradedQuantity | decimal      | May not be present |
 | totalTradedQuantity | decimal      | May not be present |

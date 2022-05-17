@@ -7,4 +7,4 @@ Please refer to the `Order Lifecycle` section for more information.
 | Field | Type | Comment |
 | --- | --- | --- |
 | type | Enum | Values are `Creation`, `Modification`, `Activation`, `Deactivation` or `Cancellation` |
-| orders | List of PrivateOrders | |
+| orders | List of [PrivateOrders](privateorder.md) | |

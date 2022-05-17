@@ -4,9 +4,9 @@ This object represents one side of a private trade.
 
 | Field | Type | Comment |
 | --- | --- | --- |
-| identifier | string | | 
+| identifier | string | |
 | orderIdentifier | long | Epex M7 identifier of the order that resulted in the trade |
-| contractArea | ContractArea | |
+| contractArea | [ContractArea](contractarea.md) | |
 | comment | string | Comment coming from the order |
 | userCode | string | Epex M7 trader identifier at the origin of the order |
 
