@@ -15,41 +15,11 @@ The target audience for this documentation is a developer wanting to implement a
 
 # Table of content
 
-* Endpoints and connection
-  * WS and REST endpoints
-  * authentication workflow
-* Scopes and Channels
-  * concepts
-  * WS URN vs REST URL
-  * subscription, unsubscription, resubscription
-  * heartbeats
-* Messages encapsulation
-  * message format
-  * message types
-  * correlation
-* Sequence
-  * concept
-  * heartbeats
-  * sequence re-ordering
-  * sequence break
-* Errors
-  * error types
+* [Endpoints and connection](1-endpoints.md)
+* [Scopes and Channels](2-scopesandchannels.md)
+* [Messages encapsulation](3-message.md)
+* [Sequence](4-sequence.md)
+* [Errors](5-errors.md)
 * Scopes
-  * M7
-    * Contract area states
-    * Public order books
-    * Public trades
-    * Market information
-    * Private trades
-    * Private orders
-      * workflow
-    * Private trades
-  * Nordpool Intraday
-    * Contract area states
-    * Public order books
-    * Public trades
-    * Market information
-    * Private trades
-    * Private orders
-      * workflow
-    * Private trades
+  * [M7](Scopes/M7/readme.md)
+    * [Order lifecycle](1-orderlifecycle.md) 
