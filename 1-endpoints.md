@@ -2,7 +2,7 @@
 
 ## Websocket endpoint
 
-The main transport protocol of this API is [Websocket](https://en.wikipedia.org/wiki/WebSocket) providing a full duplex channel on a single tcp connection. This allows a client to receive and send data using one single connection. This endpoint is to receive live data without the need of regularly querying.
+The main transport protocol of this API is [Websocket](https://en.wikipedia.org/wiki/WebSocket) providing a full duplex channel on a single TCP connection. This allows a client to receive and send data using one single connection. This endpoint is to receive live data without the need of regularly querying.
 
 The URL of the endpoint is:
 
