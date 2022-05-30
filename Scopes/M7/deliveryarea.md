@@ -2,15 +2,15 @@
 
 | Name | Code | Volume unit | Price Unit |
 | --- | --- | --- | --- |
-| APG | AT-APG | MWh | EUR |
-| Swissgrid | CH-SWISSGRID | MWh | EUR |
-| Tennet DE | DE-TENNET | MWh | EUR |
-| Transnet | DE-TRANSNET | MWh | EUR |
-| Amprion | DE-AMPRION | MWh | EUR |
-| 50Hertz | DE-50HERTZ | MWh | EUR |
-| RTE | FR-RTE | MWh | EUR |
-| ELIA | BE-ELIA | MWh | EUR |
-| Elexon | UK-ELEXON | MWh | GBP |
-| Tennet NL | NL-TENNET | MWh | EUR |
-| DK1 | DK-DK1 | MWh | EUR |
-| DK2 | DK-DK2 | MWh | EUR | 
+| APG | AT-APG | MW | EUR |
+| Swissgrid | CH-SWISSGRID | MW | EUR |
+| Tennet DE | DE-TENNET | MW | EUR |
+| Transnet | DE-TRANSNET | MW | EUR |
+| Amprion | DE-AMPRION | MW | EUR |
+| 50Hertz | DE-50HERTZ | MW | EUR |
+| RTE | FR-RTE | MW | EUR |
+| ELIA | BE-ELIA | MW | EUR |
+| Elexon | UK-ELEXON | MW | GBP |
+| Tennet NL | NL-TENNET | MW | EUR |
+| DK1 | DK-DK1 | MW | EUR |
+| DK2 | DK-DK2 | MW | EUR | 
