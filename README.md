@@ -6,12 +6,6 @@ Welcome to the documentation for eZ-nergy Websocket API.
 
 The target audience for this documentation is a developer wanting to implement a client for eZ-nergy websocket API. Knowing how to connect to a websocket and how to consume REST APIs in the target language is a pre-requisite.
 
-# Revisions
-
-| Date | Author | Description |
-| --- | --- | --- |
-| 2022-05-10 | Callixte Cauchois | Initial version |
-
 
 # Table of content
 
@@ -34,3 +28,8 @@ The target audience for this documentation is a developer wanting to implement a
     * [PublicOrderBook](Scopes/M7/publicorderbook.md)
     * [PublicTrade](Scopes/M7/publictrade.md)
     * [TradeSide](Scopes/M7/tradeside.md)
+  * [Test](Scopes/TestScope/readme.md)
+    * [Normal events channel](Scopes/TestScope/1-normal.md)
+    * [Fast events channel](Scopes/TestScope/2-fast.md)
+    * [Disordered events channel](Scopes/TestScope/3-disordered.md)
+    * [Events with holes channel](Scopes/TestScope/4-withholes.md)

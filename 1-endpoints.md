@@ -58,4 +58,5 @@ Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJhd3MtZnJ0L
 
 If this header is missing or ill-formed, or if the token is expired, the api will return a 401 instead of the expected response.
 
-Note: the token can expire. If so, it will stop working and respond with 401. In that case, you should request a new one.
+> Note: the token can expire. If so, it will stop working and respond with 401. In that case, you should request a new one.  
+While connected to the websocket, you will receive a message when the token is nearing expiration, about 5 minutes before it expires. See [Message Type Token refresh](3-message.md#token_refresh)

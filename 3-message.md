@@ -6,15 +6,15 @@ Dates and times are expressed in ISO-8601 format in UTC like this: `2022-05-22T1
 
 The messages are comprised of an envelop and a payload. The fields of the envelop are strictly defined.
 
-| Field | Type   | Comment |
-| --- |--------| --- |
-| type | string | Type of the message. See below. |
-| channel | URN    | Channel of the message |
-| sequence | long   | Sequence of the message for the channel. Only for event messages |
-| correlation | string | Set on a request sent to the API, it will be present on all the responses from the API |
-| part | int    | In case of split messages, indicate the part of the message (From 0 to N) |
-| totalparts | int    | In case of split messages, indicates the total number of parts to expect (N) |
-| data | string | Content of the message. It is a json object or list serialized. See the specific documentation of the channel for more information about the type. |
+| Field       | Type   | Comment                                                                                                                                            |
+| ----------- | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| type        | string | Type of the message. See below.                                                                                                                    |
+| channel     | URN    | Channel of the message                                                                                                                             |
+| sequence    | long   | Sequence of the message for the channel. Only for event messages                                                                                   |
+| correlation | string | Set on a request sent to the API, it will be present on all the responses from the API                                                             |
+| part        | int    | In case of split messages, indicate the part of the message (From 0 to N)                                                                          |
+| totalparts  | int    | In case of split messages, indicates the total number of parts to expect (N)                                                                       |
+| data        | string | Content of the message. It is a json object or list serialized. See the specific documentation of the channel for more information about the type. |
 
 ## Correlation
 
@@ -84,13 +84,27 @@ In case of other object, please refer to the dedicated part of the documentation
 
 There is a fixed number of message types:
 
-| Name | Direction | Comment |
-| --- | --- | --- |
-| subscribe | emission | Used to subscribe to a channel |
-| subscribed | reception | Sent upon a successful subscription |
-| unsubscribe | emission | Used to un-subscribe to a channel |
-| unsubscribed | reception | Sent upon an un-subscription of a channel. |
-| request | emission | Sent to request an action on a channel. See the specific documentation of the channel for more information. |
-| event | reception | Used to represent data flowing on the channel. See the specific documentation of the channel for more information. |
-| heartbeat | reception | Regular heartbeat message. It contains the sequence of all the channels currently subscribed. |
-| error | reception | Used to represent an error that occurred |
+| Name          | Direction | Comment                                                                                                            |
+| ------------- | --------- | ------------------------------------------------------------------------------------------------------------------ |
+| subscribe     | emission  | Used to subscribe to a channel                                                                                     |
+| subscribed    | reception | Sent upon a successful subscription                                                                                |
+| unsubscribe   | emission  | Used to un-subscribe to a channel                                                                                  |
+| unsubscribed  | reception | Sent upon an un-subscription of a channel.                                                                         |
+| request       | emission  | Sent to request an action on a channel. See the specific documentation of the channel for more information.        |
+| event         | reception | Used to represent data flowing on the channel. See the specific documentation of the channel for more information. |
+| heartbeat     | reception | Regular heartbeat message. It contains the sequence of all the channels currently subscribed.                      |
+| error         | reception | Used to represent an error that occurred                                                                           |
+| token_refresh | reception | Sent when the acess token is about to expire                                                                       |
+
+## Token refresh
+
+The `token refresh` event will be sent out in the 5 minutes before the access token is about to expire. The payload of the event will contain a new access token that is valid for the whole period again.
+
+```json
+{
+  "type": "token_refresh",
+  "data": "{\"token\": \"<new access token>\"}"
+}
+```
+
+The new token can be read from the payload and used to make new rest calls. Internally, the new is automatically refreshed for the open websocket connections.
