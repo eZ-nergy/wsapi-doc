@@ -27,7 +27,7 @@ Each channel focuses on different use cases when using the WebSocket API, which 
 
 # Table of Contents
 
-- [Normal events channel](1-normal.md)
-- [Fast events channel](2-fast.md)
-- [Disordered events channel](3-disordered.md)
-- [Events with holes channel](4-withholes.md)
+* [Normal events channel](1-normal.md)
+* [Fast events channel](2-fast.md)
+* [Disordered events channel](3-disordered.md)
+* [Events with holes channel](4-withholes.md)

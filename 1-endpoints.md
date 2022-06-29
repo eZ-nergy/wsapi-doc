@@ -60,3 +60,7 @@ If this header is missing or ill-formed, or if the token is expired, the api wil
 
 > Note: the token can expire. If so, it will stop working and respond with 401. In that case, you should request a new one.  
 While connected to the websocket, you will receive a message when the token is nearing expiration, about 5 minutes before it expires. See [Message Type Token refresh](3-message.md#token_refresh)
+
+# Rate limiting and other limitations
+
+Rate limiting is not implemented yet. It will come in the future and you will be warned beforehand.
