@@ -35,6 +35,15 @@ https://<eZ-Ops host>/api/EZ4a26927fea/m7/public_order_books/6395d740-6e55-11e8-
 
 It order to start receiving events in a channel, you need to subscribe to it. It is done by sending a `subscribe` request. (See the [`Message`](3-message.md) section of the documentation). The API will acknowledge the subscription with a `subscribed` event.
 
+Example of a `subscribe` message for the `Test` scope:
+```json
+{
+    "type": "subscribe",
+    "correlation": "461687687687",
+    "channel":"urn:ez-api:TestClient:test:normal"
+}
+```
+
 It is not possible to subscribe twice to the same channel (inside a single connection). An error message `error.already_subscribed` will be sent back if this happens.
 
 If the subscription is not needed anymore, you can unsubscribe by sending an `unsubscribe` message which will be acknowledged by a `unsubscribed` event.
