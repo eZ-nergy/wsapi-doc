@@ -1,16 +1,16 @@
 ﻿# Market information
 
-| Field | Type         | Comment |
-| --- |--------------| --- |
-| contractArea | [ContractArea](contractarea.md) | |
-| lastTradedPrice | decimal      | May not be present |
-| lastTradedQuantity | decimal      | May not be present |
-| totalTradedQuantity | decimal      | May not be present |
-| lastTradedDate | DateTime     | May not be present |
-| highestTradedPrice | decimal      | May not be present |
-| lowestTradedPrice | decimal      | May not be present |
-| priceDirection | Enum         | See below for values. May not be present |
-| volumeWeightedAveragePrice | decimal      | May not be present |
+| Field                      | Type                            | Comment                                  |
+|----------------------------|---------------------------------|------------------------------------------|
+| contractArea               | [ContractArea](contractarea.md) |                                          |
+| lastTradedPrice            | decimal                         | May not be present                       |
+| lastTradedQuantity         | decimal                         | May not be present                       |
+| totalTradedQuantity        | decimal                         | May not be present                       |
+| lastTradedDate             | DateTime                        | May not be present                       |
+| highestTradedPrice         | decimal                         | May not be present                       |
+| lowestTradedPrice          | decimal                         | May not be present                       |
+| priceDirection             | Enum                            | See below for values. May not be present |
+| volumeWeightedAveragePrice | decimal                         | May not be present                       |
 
 Values for priceDirection:
 ```

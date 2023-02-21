@@ -4,29 +4,38 @@ This object represents orders sent by you or your company as a market participan
 
 | Field                  | Type                            | Comment                                                          |
 |------------------------|---------------------------------|------------------------------------------------------------------|
-| identifier             | long                            | Identifier for Epex M7                                           |
+| identifier             | long                            | Identifier for NordPool                                          |
 | clientIdentifier       | GUID                            | Identifier defined by you when posting the order                 |
-| revisionNumber         | long                            | Revision of this order from Epex M7 point of view                |
+| revisionNumber         | long                            | Revision of this order from NordPool point of view               |
 | contractArea           | [ContractArea](contractarea.md) |                                                                  |
 | quantity               | decimal                         |                                                                  |
 | price                  | decimal                         |                                                                  |
 | direction              | Enum                            | `Buy` or `Sell`                                                  |
 | executionRestriction   | Enum                            | See below for values                                             |
 | initialQuantity        | decimal                         |                                                                  |
-| type                   | Enum                            | `Regular` or `Iceberg` or `Block`                                |
+| type                   | Enum                            | `Limit` or `Iceberg` or `UserDefinedBlock`                       |
 | comment                | string                          |                                                                  |
 | entryDate              | DateTime                        |                                                                  |
-| validityRestriction    | Enum                            | `GoodForSession` or `GoodUntilDate`                              |
-| validityDate           | DateTime                        | Present when `validityRestriction` is `GoodUntilDate`            |
-| state                  | Enum                            | See below for values                                             |
-| action                 | Enum                            | See below for values                                             |
+| timeInForce            | TimeInForce Enum                | See below for values                                             |
+| validityDate           | DateTime                        | Present when `timeInForce` is `GoodToDate`                       |
+| state                  | State Enum                      | See below for values                                             |
+| action                 | Action Enum                     | See below for values                                             |
 | icebergPriceDelta      | decimal                         | Added to the initial price whenever a new iceberg slice is added |
 | icebergDisplayQuantity | decimal                         | Quantity displayed on screen                                     |
 | icebergHiddenQuantity  | decimal                         | Remaining hidden quantity                                        |
+| metadatas              | List of key-values              | Optional metadata                                                |
+| errors                 | List of [Error](ordererror.md)  | Optional list of errors                                          |
+
+Values for `timeInForce`:
+```
+ImmediateOrCancel,
+FillOrKill,
+GoodToDate,
+GoodForSession
+```
 
 Values for `state`:
 ```
-Unknown,
 Hibernated,
 Inactive,
 Active,
@@ -36,60 +45,46 @@ Rejected
 
 Values for `action`:
 ```
-Unknown,
-AddedByUser,
-DeactivatedByUser,
-ModifiedByUser,
-DeletedByUser,
-RejectedByUser,
-AddedByMarketOps,
-DeactivatedByMarketOps,
-ModifiedByMarketOps,
-DeletedByMarketOps,
-RejectedByMarketOps,
-AddedBySystem,
-DeactivatedBySystem,
-ModifiedBySystem,
-DeletedBySystem,
-RejectedBySystem,
-FullyExecuted,
-PartiallyExecuted,
-NewIcebergSliceAdded,
-QuoteAdded,
-QuoteFullyExecuted,
-QuotePartiallyExecuted,
-SharedOrderBookUnavailability,
-SharedError
+UserAdded,
+UserHibernated,
+UserModified,
+UserDeleted,
+SystemHibernated,
+SystemModified,
+SystemDeleted,
+SystemExpired,
+PartialExecution,
+FullExecution,
+IcebergSliceAdded
 ```
 
 Example:
 ```json
 {
-  "identifier": 4654964631,
-  "clientIdentifier": "1a449683-e416-4271-8151-a37dde77e272",
+  "identifier": "X213112059",
+  "clientIdentifier": "352bfce0-ec44-4aaf-8dc1-003265851b9e",
   "revisionNumber": 1,
   "contractArea": {
-    "deliveryArea": "DE-AMPRION",
-    "contractName": "H13:00-13:30_XB",
-    "deliveryStart": "2022-02-03T12:00Z",
-    "deliveryEnd": "2022-02-03T12:30Z",
-    "product": {
-      "name": "XBid-HalfHour",
-      "granularity": "HalfHour",
-      "marketType": "Xbid"
-    }
+    "identifier": "DE-50HERTZ-NX_315543",
+    "deliveryArea": "DE-50HERTZ",
+    "contractName": "PH-20230220-22",
+    "deliveryStart": "2023-02-20T20:00:00Z",
+    "deliveryEnd": "2023-02-20T21:00:00Z",
+    "type": "Xbid",
+    "product": "P60Min"
   },
-  "quantity": 456.2,
-  "price": 456.89,
+  "quantity": 20.2,
+  "price": 96.3,
   "direction": "Buy",
-  "executionRestriction": "ImmediateOrCancel",
-  "initialQuantity": 568.2,
-  "type": "Regular",
-  "comment": "EZ2_152_45_12.1__I_",
-  "entryDate": "2022-02-03T10:25:45Z",
-  "validityRestriction": "GoodForSession",
-  "state": "Active",
-  "action": "PartiallyExecuted",
+  "timeInForce": "ImmediateOrCancel",
+  "initialQuantity": 20.2,
+  "type": "Limit",
+  "comment": "FromWSAPI",
+  "entryDate": "2023-02-20T12:27:54.484Z",
+  "validityDate": "2023-02-20T19:30:00Z",
+  "state": "Hibernated",
+  "action": "UserAdded",
+  "executionRestriction": "Aon",
   "metadata": {}
 }
 ```

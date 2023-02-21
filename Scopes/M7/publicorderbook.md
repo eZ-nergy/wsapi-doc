@@ -1,12 +1,12 @@
 ﻿# Public Order Book
 
-| Field | Type | Comment |
-| --- | --- | --- |
-| isDelta | boolean | Indicates if this object is part of a snapshot (`false`) or a delta to apply on a snapshot (`true`) |
-| revisionNumber | long | Revision number of the order book on Epex M7 side |
-| contractArea | [ContractArea](contractarea.md) | |
-| buyOrders | List of [PublicOrders](publicorder.md) | |
-| sellOrders | List of [PublicOrders](publicorder.md) | |
+| Field          | Type                                   | Comment                                                                                             |
+|----------------|----------------------------------------|-----------------------------------------------------------------------------------------------------|
+| isDelta        | boolean                                | Indicates if this object is part of a snapshot (`false`) or a delta to apply on a snapshot (`true`) |
+| revisionNumber | long                                   | Revision number of the order book on Epex M7 side                                                   |
+| contractArea   | [ContractArea](contractarea.md)        |                                                                                                     |
+| buyOrders      | List of [PublicOrders](publicorder.md) |                                                                                                     |
+| sellOrders     | List of [PublicOrders](publicorder.md) |                                                                                                     |
 
 Example:
 ```json

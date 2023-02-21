@@ -2,16 +2,16 @@
 
 This object represents a trade done by you or your company as a market participant.
 
-| Field      | Type | Comment |
-|------------| --- | --- |
-| identifier | string | Identifier of the trade at Epex M7 |
-| quantity   | decimal | |
-| price      | decimal | |
-| execDate   | DateTime | Date and time of the execution of the trade |
-| buySide    | [TradeSide](tradeside.md) | May not be present, if not private |
-| sellSide   | [TradeSide](tradeside.md) | May not be present, if not private |
-| state | Enum | See below for values |
-| revisionNumber | long | |
+| Field          | Type                      | Comment                                     |
+|----------------|---------------------------|---------------------------------------------|
+| identifier     | string                    | Identifier of the trade at Epex M7          |
+| quantity       | decimal                   |                                             |
+| price          | decimal                   |                                             |
+| execDate       | DateTime                  | Date and time of the execution of the trade |
+| buySide        | [TradeSide](tradeside.md) | May not be present, if not private          |
+| sellSide       | [TradeSide](tradeside.md) | May not be present, if not private          |
+| state          | Enum                      | See below for values                        |
+| revisionNumber | long                      |                                             |
 
 Values for state:
 ```
