@@ -1,10 +1,10 @@
 ﻿# Product
 
-| Field | Type | Comment                                                    |
-| --- | --- |------------------------------------------------------------|
-| name | string | |
-| granularity | Enum | Vlaues can be `Hour`, `HalfHour` and `QuarterHour` |
-| type | Enum | `Local` or `Xbid`|
+| Field       | Type   | Comment                                            |
+|-------------|--------|----------------------------------------------------|
+| name        | string |                                                    |
+| granularity | Enum   | Values can be `Hour`, `HalfHour` and `QuarterHour` |
+| type        | Enum   | `Local` or `Xbid`                                  |
 
 Example:
 ```json

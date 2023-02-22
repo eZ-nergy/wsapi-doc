@@ -2,12 +2,12 @@
 
 This object represents an order in a public order book.
 
-| Field | Type | Comment |
-| --- | --- | --- |
-| identifier | long | Identifier of the order at Epex M7 |
-| price | decimal | |
-| quantity | decimal | |
-| entryDate | DateTime | Date of entry in the order book |
+| Field      | Type     | Comment                            |
+|------------|----------|------------------------------------|
+| identifier | long     | Identifier of the order at Epex M7 |
+| price      | decimal  |                                    |
+| quantity   | decimal  |                                    |
+| entryDate  | DateTime | Date of entry in the order book    |
 
 Example:
 ```json

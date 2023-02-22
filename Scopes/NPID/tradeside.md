@@ -8,30 +8,27 @@ This object represents one side of a private trade.
 | orderIdentifier | long                            | Epex M7 identifier of the order that resulted in the trade |
 | contractArea    | [ContractArea](contractarea.md) |                                                            |
 | comment         | string                          | Comment coming from the order                              |
-| userCode        | string                          | Epex M7 trader identifier at the origin of the order       |
+| metadata        | List of key-value pairs         | Metadata coming from the order                             |
 
 Example:
 ```json
 {
-  "identifier": "58869375_S",
-  "orderIdentifier": 303134066,
+  "identifier": "X42445956_S",
+  "orderIdentifier": "6e041182-0cbc-4fe6-9941-98673868028e",
   "contractArea": {
-    "deliveryArea": "DE-AMPRION",
-    "contractName": "18-19_XB",
-    "deliveryStart": "2022-02-04T17:00:00Z",
-    "deliveryEnd": "2022-02-04T18:00:00Z",
-    "product": {
-      "name": "XBID_Hour_Power",
-      "granularity": "Hour",
-      "type": "Xbid"
-    }
+    "identifier": "DE-50HERTZ-NX_315675",
+    "deliveryArea": "DE-50HERTZ",
+    "contractName": "PH-20230221-16",
+    "deliveryStart": "2023-02-21T14:00:00Z",
+    "deliveryEnd": "2023-02-21T15:00:00Z",
+    "type": "Xbid",
+    "product": "P60Min"
   },
-  "comment": "EZ2_2051_4_2.1_M__",
-  "userCode": "TRD004",
+  "comment": "EZ2_1162_8_1.1_M__",
   "metadata": {
-    "SESSION_NAME": "Subs IM RW 1",
-    "RUN_ID": "4",
-    "SESSION": "2051"
+    "SESSION_NAME": "Session 1",
+    "RUN_ID": "8",
+    "SESSION": "1162"
   }
 }
 ```

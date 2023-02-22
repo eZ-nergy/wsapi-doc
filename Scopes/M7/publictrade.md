@@ -2,16 +2,16 @@
 
 This object represents any trade that happened on Epex M7.
 
-| Field | Type         | Comment |
-| --- |--------------| --- |
-| identifier | string       | Identifier of the trade at Epex M7 |
-| revisionNumber | long         | |
-| price | decimal      | |
-| quantity | decimal      | |
-| state | Enum         | See below for values |
-| buyContractArea | [ContractArea](contractarea.md) | Buy side of the trade |
-| sellContractArea | [ContractArea](contractarea.md) | Sell side of the trade |
-| execDate | DateTime     | |
+| Field            | Type                            | Comment                            |
+|------------------|---------------------------------|------------------------------------|
+| identifier       | string                          | Identifier of the trade at Epex M7 |
+| revisionNumber   | long                            |                                    |
+| price            | decimal                         |                                    |
+| quantity         | decimal                         |                                    |
+| state            | Enum                            | See below for values               |
+| buyContractArea  | [ContractArea](contractarea.md) | Buy side of the trade              |
+| sellContractArea | [ContractArea](contractarea.md) | Sell side of the trade             |
+| execDate         | DateTime                        |                                    |
 
 Values for state:
 ```

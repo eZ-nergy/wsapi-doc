@@ -6,14 +6,14 @@ Note: it is assumed that you have a basic knowledge about Epex M7.
 
 The M7 scope has the following channels.
 
-| Name | Code | Area | Product | Urn |
-| --- | --- | --- | --- | --- |
-| Public order books | m7.public_order_books | X | X | `urn:ez-api:<Contract>:m7:public_order_books:<ClientGuid>:<Area>:<Product>` |
-| Market information | m7.market_information | X | X | `urn:ez-api:<Contract>:m7:market_information:<ClientGuid>:<Area>:<Product>` |
-| Private trades | m7.private_trades | X |  | `urn:ez-api:<Contract>:m7:private_trades:<ClientGuid>:<Area>` |
-| Contract area states | m7.contract_area_states | X |  | `urn:ez-api:<Contract>:m7:contract_area_states:<ClientGuid>:<Area>` |
-| Private orders | m7.private_orders | X |  | `urn:ez-api:<Contract>:m7:private_orders:<ClientGuid>:<Area>` |
-| Public trades | m7.public_trades | X |  | `urn:ez-api:<Contract>:m7:public_trades:<ClientGuid>:<Area>` |
+| Name                 | Code                    | Area | Product | Urn                                                                         |
+|----------------------|-------------------------|------|---------|-----------------------------------------------------------------------------|
+| Public order books   | m7.public_order_books   | X    | X       | `urn:ez-api:<Contract>:m7:public_order_books:<ClientGuid>:<Area>:<Product>` |
+| Market information   | m7.market_information   | X    | X       | `urn:ez-api:<Contract>:m7:market_information:<ClientGuid>:<Area>:<Product>` |
+| Private trades       | m7.private_trades       | X    |         | `urn:ez-api:<Contract>:m7:private_trades:<ClientGuid>:<Area>`               |
+| Contract area states | m7.contract_area_states | X    |         | `urn:ez-api:<Contract>:m7:contract_area_states:<ClientGuid>:<Area>`         |
+| Private orders       | m7.private_orders       | X    |         | `urn:ez-api:<Contract>:m7:private_orders:<ClientGuid>:<Area>`               |
+| Public trades        | m7.public_trades        | X    |         | `urn:ez-api:<Contract>:m7:public_trades:<ClientGuid>:<Area>`                |
 
 You need to subscribe per channel and provide area and product if area or product are required.
 
