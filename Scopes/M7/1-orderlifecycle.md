@@ -28,7 +28,7 @@ On the `PrivateOrder` objects, some fields are mandatory, some are not needed.
 | entryDate              | Ignored   | Set by the system                                       |
 | validityRestriction    | Optional  | Defaults to `GoodForSession`                            |
 | validityDate           | Optional  | Mandatory if `ValidityRestriction` is `GoodUntilDate`   |
-| icebergVisibleQuantity | Optional  | If set, `Type` will be `Iceberg`                        |
+| icebergDisplayQuantity | Optional  | If set, `Type` will be `Iceberg`                        |
 | icebergPriceDelta      | Optional  |                                                         |
 | icebergHiddenQuantity  | Ignored   | Set to `Quantity - IcebergVisibleQuantity`              |
 
