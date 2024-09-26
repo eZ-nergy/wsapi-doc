@@ -3,7 +3,6 @@
 | Field                      | Type                                            | Comment                                  |
 |----------------------------|-------------------------------------------------|------------------------------------------|
 | contractArea               | [ContractArea](contractarea.md)                 |                                          |
-| histories                  | List of [TradeHistory](tradehistory.md) objects |                                          |
 | dayAheadPrice              | decimal                                         | May not be present                       |
 | lastTradedPrice            | decimal                                         | May not be present                       |
 | lastTradedQuantity         | decimal                                         | May not be present                       |
@@ -34,18 +33,6 @@ Example:
     "product": "P60Min"
   },
   "dayAheadPrice": 48.86,
-  "histories": [
-    {
-      "quantity": 7,
-      "price": 99.79,
-      "tradeDate": "2023-02-20T11:27:42.77Z"
-    },
-    {
-      "quantity": 1.1,
-      "price": 53.41,
-      "tradeDate": "2023-02-20T11:30:19.393Z"
-    }
-  ],
   "priceDirection": "Up"
 }
 ```
